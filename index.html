@@ -10,78 +10,86 @@
 </head>
 <body>
     <div class="container">
-        <form class="row g-3">
-            <div class="col-md-5">
-                <label for="inputCard" class="form-label">Card #</label>
-                <input type="number" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXX">
-            </div>
-            <div class="col-md-2">
-                <label for="inputCvc" class="form-label">CVC #</label>
-                <input type="nuember" class="form-control" id="inputCvc" placeholder="0000">
-            </div>
-            <div class="col-5">
-                <label for="inputCity" class="form-label">Amount</label>
-                <div class="input-group">
-                    <span class="input-group-text">$</span>
-                    <input type="text" class="form-control" id="inputCity" aria-label="Amount (to the nearest dollar)" placeholder="Amount">
+        
+        <form>
+            <fieldset class="row g-3 border py-3 px-4">
+                <legend class="border py-3 px-4">Payment form example</legend>
+                <div class="col-md-5">
+                    <label for="inputCard" class="form-label">Card #</label>
+                    <input type="number" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXX">
                 </div>
-            </div>
-            <div class="col-md-6">
-                <label for="FirstName" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="FirstName">
-            </div>
-            <div class="col-md-6">
-                <label for="LastName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="LastName">
-            </div>
-            <div class="col-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="col-3">
-                <label for="inputState" class="form-label">State</label>
-                <select class="form-select" id="inputState">
-                    <option selected>Pick a state</option>
-                    <option value="1">California</option>
-                    <option value="2">Texas</option>
-                    <option value="3">New York</option>
-                    <option value="3">Florida</option>
-                    <option value="3">Illinois</option>
-                </select>
-            </div>
-            <div class="col-3">
-                <label for="inputCodigoPostal" class="form-label">Postal code</label>
-                <input type="text" class="form-control" id="inputCodigoPostal">
-            </div>
-            <div class="col-6">
-                <label for="" class="form-label">We accept:</label>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                    <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa"></i></label>
+                <div class="col-md-2">
+                    <label for="inputCvc" class="form-label">CVC #</label>
+                    <input type="nuember" class="form-control" id="inputCvc" placeholder="0000" required>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-mastercard"></i></label>
+                <div class="col-5">
+                    <label for="inputCity" class="form-label">Amount</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" id="inputCity" aria-label="Amount (to the nearest dollar)" placeholder="Amount" required>
+                    </div>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                    <label class="form-check-label" for="inlineRadio3"><i class="fa-solid fa-credit-card"></i></label>
+                <div class="col-md-6">
+                    <label for="FirstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="FirstName" required>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4">
-                    <label class="form-check-label" for="inlineRadio4"><i class="fa-regular fa-credit-card"></i></label>
+                <div class="col-md-6">
+                    <label for="LastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="LastName" required>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Comments</label>
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity" required>
                 </div>
-            </div>
-            <div class="col-12">
-                <button type="button" class="btn btn-secondary">Cancel</button>
-                <button type="submit" class="btn btn-primary">Send</button>
-            </div>
+                <div class="col-3">
+                    <label for="inputState" class="form-label">State</label>
+                    <select class="form-select" id="inputState" required>
+                        <option selected>Pick a state</option>
+                        <option value="1">California</option>
+                        <option value="2">Texas</option>
+                        <option value="3">New York</option>
+                        <option value="3">Florida</option>
+                        <option value="3">Illinois</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="inputCodigoPostal" class="form-label">Postal code</label>
+                    <input type="text" class="form-control" id="inputCodigoPostal" required>
+                </div>
+                <div class="col-6 d-flex flex-column">
+                    <span>We accept:</span>
+                    <div class="form-check-wrapper bg-secondary p-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                            <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-mastercard"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio3"><i class="fa-solid fa-credit-card"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4">
+                            <label class="form-check-label" for="inlineRadio4"><i class="fa-regular fa-credit-card"></i></label>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="col-6">
+                    <div class="form-floating">
+                        <span>Message</span>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
+                        <span class="text-muted">Add any notes here.</span>
+                    </div>
+                </div>
+                <div class="col-12 text-end border py-3 px-4">
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </fieldset>
         </form>
 
     </div>
