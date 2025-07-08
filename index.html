@@ -10,40 +10,42 @@
 </head>
 <body>
     <div class="container">
-        
         <form>
-            <fieldset class="row g-3 border py-3 px-4">
-                <legend class="border py-3 px-4">Payment form example</legend>
+            <fieldset class="row g-3 border px-4 my-5" >
+                <legend class="border-bottom py-3 px-4 fw-bold mt-1 w-100 bg-light">Payment form example</legend>
+                <div>
+                    <p id="error-message" class="alert alert-danger d-none">Some fields are missing</p>
+                </div>
                 <div class="col-md-5">
                     <label for="inputCard" class="form-label">Card #</label>
-                    <input type="number" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXX">
+                    <input type="text" class="form-control required-field" id="inputCard" placeholder="XXXXXXXXXXXXX">
                 </div>
                 <div class="col-md-2">
                     <label for="inputCvc" class="form-label">CVC #</label>
-                    <input type="nuember" class="form-control" id="inputCvc" placeholder="0000" required>
+                    <input type="text" class="form-control required-field" id="inputCvc" placeholder="000">
                 </div>
                 <div class="col-5">
-                    <label for="inputCity" class="form-label">Amount</label>
+                    <label for="inputAmount" class="form-label">Amount</label>
                     <div class="input-group">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control" id="inputCity" aria-label="Amount (to the nearest dollar)" placeholder="Amount" required>
+                        <input type="text" class="form-control required-field" id="inputAmount" aria-label="Amount (to the nearest dollar)" placeholder="Amount" >
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label for="FirstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="FirstName" required>
+                    <input type="text" class="form-control required-field" id="FirstName">
                 </div>
                 <div class="col-md-6">
                     <label for="LastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="LastName" required>
+                    <input type="text" class="form-control required-field" id="LastName">
                 </div>
                 <div class="col-6">
                     <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity" required>
+                    <input type="text" class="form-control required-field" id="inputCity">
                 </div>
                 <div class="col-3">
                     <label for="inputState" class="form-label">State</label>
-                    <select class="form-select" id="inputState" required>
+                    <select class="form-select required-field" id="inputState">
                         <option selected>Pick a state</option>
                         <option value="1">California</option>
                         <option value="2">Texas</option>
@@ -54,7 +56,7 @@
                 </div>
                 <div class="col-3">
                     <label for="inputCodigoPostal" class="form-label">Postal code</label>
-                    <input type="text" class="form-control" id="inputCodigoPostal" required>
+                    <input type="text" class="form-control required-field" id="inputCodigoPostal">
                 </div>
                 <div class="col-6 d-flex flex-column">
                     <span>We accept:</span>
@@ -72,7 +74,7 @@
                             <label class="form-check-label" for="inlineRadio3"><i class="fa-solid fa-credit-card"></i></label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
                             <label class="form-check-label" for="inlineRadio4"><i class="fa-regular fa-credit-card"></i></label>
                         </div>
                     </div>
@@ -81,19 +83,22 @@
                 <div class="col-6">
                     <div class="form-floating">
                         <span>Message</span>
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
+                        <textarea class="form-control required-field" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                         <span class="text-muted">Add any notes here.</span>
                     </div>
+                    
                 </div>
-                <div class="col-12 text-end border py-3 px-4">
+                <div class="col-12 text-end py-3 px-3">
                     <button type="button" class="btn btn-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="submit-button btn btn-primary">Send</button>
                 </div>
             </fieldset>
         </form>
 
     </div>
     
+
+    <script src="script.js"></script>
 
  
 </body>
